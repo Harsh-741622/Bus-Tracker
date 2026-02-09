@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fun Zone | BusTrack Bharat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="brand">
+      <div class="brand-icon">🚌</div>
+      <div class="brand-text">
+        <div class="brand-title">BusTrack</div>
+        <div class="brand-sub">
+          <img src="india.png" alt="India Flag" class="flag"> भारत
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html" class="nav-item"><span class="nav-ico">🏠</span> Home</a>
+      <a href="bus.html" class="nav-item"><span class="nav-ico">🚌</span> Bus Tracking</a>
+      <a href="news.html" class="nav-item"><span class="nav-ico">📰</span> News</a>
+      <a href="fun.html" class="nav-item active"><span class="nav-ico">🎮</span> Fun Zone</a>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <div class="page-header modern-header">
+    <h1>Fun Zone</h1>
+    <p>Small games to kill time while waiting (demo)</p>
+  </div>
+
+  <div class="fun-wrap">
+    <div class="fun-grid">
+
+      <div class="fun-card modern-card">
+        <h3>🎯 Guess the Number</h3>
+        <p>Computer picks 1–10. Try to guess it.</p>
+
+        <input id="guessInput" type="number" min="1" max="10" placeholder="Enter 1-10">
+        <button class="search-btn" id="guessBtn">Guess</button>
+        <p id="guessMsg" class="small-msg"></p>
+      </div>
+
+      <div class="fun-card modern-card">
+        <h3>🪙 Quick Poll</h3>
+        <p>What do you want most in a bus app?</p>
+
+        <button class="mini-btn poll" onclick="vote('Tracking')">Live Tracking</button>
+        <button class="mini-btn poll" onclick="vote('Routes')">Route Map</button>
+        <button class="mini-btn poll" onclick="vote('Alerts')">Arrival Alerts</button>
+
+        <p id="pollMsg" class="small-msg"></p>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // Guess game (super simple)
+    var secret = Math.floor(Math.random() * 10) + 1;
+    var guessBtn = document.getElementById("guessBtn");
+    var guessInput = document.getElementById("guessInput");
+    var guessMsg = document.getElementById("guessMsg");
+
+    guessBtn.onclick = function () {
+      var val = Number(guessInput.value);
+
+      if (!val) {
+        guessMsg.innerText = "Enter a number first!";
+        return;
+      }
+
+      if (val === secret) {
+        guessMsg.innerText = "✅ Correct! New number generated.";
+        secret = Math.floor(Math.random() * 10) + 1;
+        guessInput.value = "";
+      } else {
+        guessMsg.innerText = "❌ Wrong! Try again.";
+      }
+    };
+
+    // Poll
+    function vote(choice) {
+      document.getElementById("pollMsg").innerText = "✅ You voted: " + choice + " (demo)";
+    }
+  </script>
+
+</body>
+</html>

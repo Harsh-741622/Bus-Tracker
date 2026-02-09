@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Track Your Bus | BusTrack Bharat</title> 
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <div class="navbar">
+    <div class="brand">
+      <div class="brand-icon">🚌</div>
+      <div class="brand-text">
+        <div class="brand-title">BusTrack</div>
+        <div class="brand-sub">
+          <img src="india.png" alt="India Flag" class="flag"> भारत
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html" class="nav-item"><span class="nav-ico">🏠</span> Home</a>
+      <a href="bus.html" class="nav-item active"><span class="nav-ico">🚌</span> Bus Tracking</a>
+      <a href="news.html" class="nav-item"><span class="nav-ico">📰</span> News</a>
+      <a href="fun.html" class="nav-item"><span class="nav-ico">🎮</span> Fun Zone</a>
+    </div>
+  </div>
+
+  <!-- ================= PAGE HEADER ================= -->
+  <div class="page-header modern-header">
+    <h1>Track Your Bus</h1>
+    <p>Use your current location + destination to find buses going your way</p>
+  </div>
+
+  <!-- ================= MAIN LAYOUT ================= -->
+  <div class="tracking-container modern-layout">
+
+    <!-- LEFT: FORM CARD -->
+    <div class="tracking-card modern-card">
+
+      <h2 class="card-title">Find buses near you</h2>
+      <p class="card-sub">We don’t ask you to type your start location. Just use current location.</p>
+
+      <!-- Step 1 -->
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <div class="step-title">Select State</div>
+          <select id="stateSelect">
+            <option value="">Select State</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Delhi">Delhi</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <div class="step-title">Select City</div>
+          <select id="citySelect" disabled>
+            <option value="">Select City</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <div class="step-title">Starting Location</div>
+          <button class="location-btn" id="useLocationBtn">📍 Use My Current Location</button>
+          <p id="locationStatus"></p>
+          <p class="safety-note">Your location is not shared with anyone. This is only for demo and safety purposes.</p>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <div class="step-title">Destination</div>
+          <input type="text" id="endLocation" placeholder="Enter destination landmark / area" />
+        </div>
+      </div>
+
+      <button class="search-btn" id="findBusBtn">Find Available Buses</button>
+    </div>
+
+   
+<!-- RIGHT: RESULTS -->
+<div class="results modern-card" id="resultsBox">
+  <h2 class="card-title">Results</h2>
+  <p class="card-sub">No buses searched yet.</p>
+  <p class="hint">Tip: After results, we’ll add “View Route on Map” for each bus.</p>
+</div>
+
+<!-- MAP SECTION (keep outside results box) -->
+<div class="map-card modern-card" id="mapSection" style="display:none;">
+  <h2 class="card-title">Bus Route Preview</h2>
+  <div id="map"></div>
+</div>
+
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
