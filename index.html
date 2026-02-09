@@ -1,27 +1,132 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Bus Tracking App</title>
-  <link rel="stylesheet" href="style.css">
+    <!-- Basic page information -->
+    <meta charset="UTF-8">
+    <title>BusTrack Bharat</title>
+
+    <!-- Link CSS file -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>🚌 Bus Tracking App</h1>
+    <!-- ================= NAVBAR ================= -->
+    <div class="navbar">
+        <div class="logo">
+            🚌 BusTrack <img src="india.png" alt="India Flag" class="flag">
+        </div>
 
-  <nav class="menu">
-    <a href="#">Bus</a> |
-    <a href="#">News</a> |
-    <a href="#">Fun</a>
-  </nav>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="bus.html">Bus Tracking</a>
+            <a href="news.html">News</a>
+            <a href="fun.html">Fun Zone</a>
+        </div>
+    </div>
 
-  <hr>
+    <!-- ================= HERO SECTION ================= -->
+    <div class="hero">
+        <h1>Know When Your Bus <span>Actually Arrives</span></h1>
 
-  <h2>Welcome</h2>
-  <p>This app helps you track buses in real time.</p>
+        <p>
+            Millions of people wait at bus stops without knowing
+            when their bus will come. BusTrack Bharat helps make
+            travel simple and stress-free.
+        </p>
 
-  <button class="btn" id="mainbtn">Find My Bus</button>
+        <div class="hero-buttons">
+            <a href="bus.html" class="btn primary">Track Your Bus</a>
+            <a href="#" class="btn secondary">Learn More</a>
+        </div>
+    </div>
 
-  <script src="script.js"></script>
+    <!-- ================= PROBLEM SECTION ================= -->
+    <div class="section">
+        <h2>The Problem We’re Solving</h2>
+
+        <div class="card-container">
+
+            <div class="card">
+                <h3>⏰ Unpredictable Wait Times</h3>
+                <p>
+                    People wait 20–30 minutes without knowing
+                    when the bus will arrive.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>📍 No Real-Time Updates</h3>
+                <p>
+                    Traditional bus systems do not provide
+                    live tracking information.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🌦️ Weather Problems</h3>
+                <p>
+                    Standing in heat or rain is difficult,
+                    especially for students and elders.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>⌛ Wasted Time</h3>
+                <p>
+                    Valuable time that could be used for
+                    studying or relaxing is lost.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ================= FEATURES SECTION ================= -->
+    <div class="section light">
+        <h2>Features Built for India</h2>
+
+        <div class="card-container">
+
+            <div class="card">
+                <h3>🛰️ Real-Time Tracking</h3>
+                <p>See where your bus is (demo version).</p>
+            </div>
+
+            <div class="card">
+                <h3>🔔 Smart Alerts</h3>
+                <p>Know when your bus is arriving.</p>
+            </div>
+
+            <div class="card">
+                <h3>📰 News Feed</h3>
+                <p>Read news while waiting at the bus stop.</p>
+            </div>
+
+            <div class="card">
+                <h3>🎮 Fun Zone</h3>
+                <p>Play small games to pass time.</p>
+            </div>
+
+            <div class="card">
+                <h3>📱 Mobile Friendly</h3>
+                <p>Designed for smartphones.</p>
+            </div>
+
+            <div class="card">
+                <h3> 
+                  <img src="india.png" alt="India Flag" class="flag">
+                  Pan-India Coverage
+                </h3>
+                <p>Designed for all Indian states.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+    <div class="footer">
+        <p>© 2025 BusTrack Bharat | College Innovation Project</p>
+    </div>
 
 </body>
 </html>
