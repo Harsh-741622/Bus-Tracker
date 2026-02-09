@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Track Your Bus | BusTrack Bharat</title>
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <div class="navbar">
+        <div class="logo">
+            🚌 BusTrack 
+            <img src="india.png" alt="India Flag" class="flag">
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="bus.html" class="active">Bus Tracking</a>
+            <a href="news.html">News</a>
+            <a href="fun.html">Fun Zone</a>
+        </div>
+    </div>
+
+    <!-- ================= PAGE HEADER ================= -->
+    <div class="page-header">
+        <h1>Track Your Bus</h1>
+        <p>Find buses going your way</p>
+    </div>
+
+    <!-- ================= TRACKING FORM ================= -->
+    <div class="tracking-container">
+
+        <div class="tracking-card">
+
+            <!-- State -->
+            <label>Select State</label>
+            <select id="stateSelect">
+                <option value="">Select State</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Delhi">Delhi</option>
+            </select>
+            <!-- City -->
+            <label>Select City</label>
+            <select id="citySelect" disabled>
+                <option value=" ">Select City</option>
+            </select>
+
+            <!-- Starting Location -->
+            <label>Starting Location</label>
+            <button class="location-btn" id="useLocationBtn">
+                Use My Current Location
+            </button>
+            <p id="locationStatus"></p>
+            <p class="safety-note">
+    Your location is not shared with anyone. This is only for demo and safety purposes.
+            </p> 
+
+            <!-- Destination -->
+            <label>Destination Location</label>
+            <input type="text" id="endLocation" placeholder="Enter destination">
+
+            <!-- Search Button -->
+            <button class="search-btn" id="findBusBtn">Find Available Buses</button>
+
+        </div>
+
+        <!-- ================= RESULTS (EMPTY FOR NOW) ================= -->
+        <div class="results" id="resultsBox">
+            <p>No buses searched yet.</p>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
